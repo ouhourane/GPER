@@ -1,0 +1,17 @@
+Package: GPER
+Title: Elastic Net and (Adaptive) Lasso Penalized Sparse Asymmetric
+        Least Squares (SALES) and Coupled Sparse Asymmetric Least
+        Squares (COSALES) using Coordinate Descent and Proximal
+        Gradient Algorithms
+Version: 1.0.0
+Date: 2015-12-26
+Author: Yuwen Gu <guxxx192@umn.edu>, Hui Zou <zouxx019@umn.edu>
+Maintainer: Yuwen Gu <guxxx192@umn.edu>
+Depends: Matrix
+Imports: grDevices, graphics, stats, methods
+Description: A coordinate descent algorithm for computing the solution path of the sparse and coupled sparse asymmetric least squares, including the elastic net and (adaptive) Lasso penalized SALES and COSALES regressions.
+License: GPL-2
+Repository: CRAN
+NeedsCompilation: yes
+Packaged: 2016-01-12 15:47:12 UTC; Yuwen
+Date/Publication: 2016-01-12 22:07:08

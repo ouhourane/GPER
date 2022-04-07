@@ -1,0 +1,33 @@
+useDynLib("GPER")
+
+import("Matrix")
+importFrom("grDevices", "gray.colors")
+importFrom("graphics", "abline", "axis", "matplot", "points", "segments", "text", "par")
+importFrom("stats", "approx", "coef", "predict")
+importFrom("methods", "new")
+
+export(gper, cv.gper, cogper, cv.cogper)
+
+S3method("print","gper")
+S3method("coef","gper")
+S3method("plot","gper")
+S3method("predict","gper")
+
+S3method("coef","gperpath")
+S3method("predict","gperpath")
+
+S3method("coef","cv.gper")
+S3method("plot","cv.gper")
+S3method("predict","cv.gper")
+
+S3method("print","cogper")
+S3method("coef","cogper")
+S3method("plot","cogper")
+S3method("predict","cogper")
+
+S3method("coef","cogperpath")
+S3method("predict","cogperpath")
+
+S3method("coef","cv.cogper")
+S3method("plot","cv.cogper")
+S3method("predict","cv.cogper")
