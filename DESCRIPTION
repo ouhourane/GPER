@@ -15,3 +15,7 @@ Repository: CRAN
 NeedsCompilation: yes
 Packaged: 2016-01-12 15:47:12 UTC; Yuwen
 Date/Publication: 2016-01-12 22:07:08
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
