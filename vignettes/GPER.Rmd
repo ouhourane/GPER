@@ -15,14 +15,15 @@ knitr::opts_knit$set(global.par = TRUE)
 knitr::opts_chunk$set(fig.width = 7, fig.height = 4)
 ```
 
+
 # Installation
 
 Like many other R packages, the simplest way to obtain GPER is to install it  from github. Type the following command in R console:
 
 ```{r setup}
 library(devtools)
-devtools::install_github("https://github.com/ouhourane/GPER.git")
-library(GPQR)
+#devtools::install_github("https://github.com/ouhourane/GPER.git")
+library(GPER)
 ```
 
 
