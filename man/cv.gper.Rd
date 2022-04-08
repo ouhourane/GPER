@@ -4,7 +4,7 @@
 \description{Does k-fold cross-validation for gper, produces a plot, and returns a value for \code{lambda}. This function is based on the \code{cv} function from the \code{glmnet} package.}
 
 \usage{
-cv.gper(x, y, lambda = NULL, pred.loss = "loss", 
+cv.gper(x, y, lambda = NULL, pred.loss = "loss",
          nfolds = 5, foldid, tau = 0.5, ...)
 }
 
@@ -12,7 +12,7 @@ cv.gper(x, y, lambda = NULL, pred.loss = "loss",
 		\item{x}{\code{x} matrix as in \code{\link{gper}}.}
 		\item{y}{response variable \code{y} as in \code{\link{gper}}.}
 		\item{lambda}{optional user-supplied lambda sequence; default is \code{NULL}, and \code{\link{gper}} chooses its own sequence.}
-		\item{nfolds}{number of folds. Default value is 5. Although 
+		\item{nfolds}{number of folds. Default value is 5. Although
     \code{nfolds} can be as large as the sample size (leave-one-out CV), it is not recommended for large datasets. Smallest value allowed is 3.}
 		\item{foldid}{an optional vector of values between 1 and \code{nfolds}, identifying what fold each observation is in. If supplied, \code{nfolds} will be supressed.}
 		\item{pred.loss}{loss function used to calculate cross-validation error. The only option now is \code{"loss"}, which is the asymmetric squared error loss (ASEL).
@@ -21,7 +21,7 @@ cv.gper(x, y, lambda = NULL, pred.loss = "loss",
 		\item{\dots}{other arguments that can be passed to gper.}
 }
 
-\details{The function runs \code{\link{gper}} \code{nfolds}+1 times; the first to get the \code{lambda} sequence, and the remainder to compute the fit with each of the folds removed. The average error and standard deviation over the folds are computed. 
+\details{The function runs \code{\link{gper}} \code{nfolds}+1 times; the first to get the \code{lambda} sequence, and the remainder to compute the fit with each of the folds removed. The average error and standard deviation over the folds are computed.
 }
 
 \value{an object of class \code{\link{cv.gper}} is returned, which is a list with the ingredients of the cross-validation fit.
@@ -38,8 +38,7 @@ cv.gper(x, y, lambda = NULL, pred.loss = "loss",
 }
 
 \author{
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu  <guxxx192@umn.edu>
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \seealso{\code{\link{gper}}}

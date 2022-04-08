@@ -21,8 +21,7 @@ fitted cogper object. This function is modified based on the \code{plot} method 
 Two coefficient profile plots are produced, one for the mean coefficients and the other for the scale coefficients.
 }
 \author{
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu  <guxxx192@umn.edu>
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \examples{

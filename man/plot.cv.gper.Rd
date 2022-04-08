@@ -17,8 +17,9 @@ curves, as a function of the \code{lambda} values used. This function is modifie
 
 \details{A plot is produced.}
 
-\author{Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu  <guxxx192@umn.edu>}
+\author{
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
+}
 
 \examples{
 set.seed(1)

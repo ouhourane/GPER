@@ -24,9 +24,8 @@ The call that produced the \code{\link{gper}} object is printed, followed by a t
 a two-column matrix, the first columns is the number of nonzero coefficients and the second column is \code{Lambda}.
 }
 
-\author{ 
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu <guxxx192@umn.edu>
+\author{
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \examples{

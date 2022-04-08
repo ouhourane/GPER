@@ -6,12 +6,12 @@
 }
 
 \usage{
-gper(x, y, nlambda = 100L, method = "er", 
-      lambda.factor = ifelse(nobs < nvars, 1e-02, 1e-04), 
-      lambda = NULL, lambda2 = 0, pf = rep(1, nvars), 
-      pf2 = rep(1, nvars), exclude, dfmax = nvars + 1, 
-      pmax = min(dfmax * 1.2, nvars), standardize = TRUE, 
-      intercept = TRUE, eps = 1e-08, maxit = 1000000L, 
+gper(x, y, nlambda = 100L, method = "er",
+      lambda.factor = ifelse(nobs < nvars, 1e-02, 1e-04),
+      lambda = NULL, lambda2 = 0, pf = rep(1, nvars),
+      pf2 = rep(1, nvars), exclude, dfmax = nvars + 1,
+      pmax = min(dfmax * 1.2, nvars), standardize = TRUE,
+      intercept = TRUE, eps = 1e-08, maxit = 1000000L,
       tau = 0.5)
 }
 
@@ -24,7 +24,7 @@ gper(x, y, nlambda = 100L, method = "er",
 
 		\item{method}{a character string specifying the loss function to use. only \code{er} is available now.}
 
-		\item{lambda.factor}{The factor for getting the minimal lambda in the \code{lambda} sequence, where \code{min(lambda)} = \code{lambda.factor} * \code{max(lambda)}.  \code{max(lambda)} is the smallest value of \code{lambda} for which all coefficients are zero. The default depends on the relationship between \eqn{N} (the number of rows in the matrix of predictors) and \eqn{p} (the number of predictors). If \eqn{N < p}, the default is \code{0.01}. If \eqn{N > p}, the default is \code{0.0001}, closer to zero.  A very small value of \code{lambda.factor} will lead to a saturated fit. It takes no effect if there is a user-supplied \code{lambda} sequence.} 
+		\item{lambda.factor}{The factor for getting the minimal lambda in the \code{lambda} sequence, where \code{min(lambda)} = \code{lambda.factor} * \code{max(lambda)}.  \code{max(lambda)} is the smallest value of \code{lambda} for which all coefficients are zero. The default depends on the relationship between \eqn{N} (the number of rows in the matrix of predictors) and \eqn{p} (the number of predictors). If \eqn{N < p}, the default is \code{0.01}. If \eqn{N > p}, the default is \code{0.0001}, closer to zero.  A very small value of \code{lambda.factor} will lead to a saturated fit. It takes no effect if there is a user-supplied \code{lambda} sequence.}
 
 		\item{lambda}{a user-supplied \code{lambda} sequence. Typically, by leaving this option unspecified users can have the program compute its own \code{lambda} sequence based on
 		\code{nlambda} and \code{lambda.factor}. It is better to supply, if necessary, a decreasing sequence of \code{lambda} values than a single (small) value. The program will ensure that the user-supplied \code{lambda} sequence is sorted in decreasing order before fitting the model.}
@@ -70,8 +70,9 @@ An object with S3 class \code{\link{gper}}.
 		\item{jerr}{error flag, for warnings and errors, 0 if no error.}
 }
 
-\author{Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu <guxxx192@umn.edu>}
+\author{
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
+}
 
 \references{
 Gu, Y. and Zou, H. (Preprint), "High-dimensional Generalizations of Asymmetric Least Squares Regression and Their Applications". \emph{Annals of Statistics}.\cr
@@ -87,8 +88,8 @@ group <- c(1:p)
 x <- matrix(rnorm(n*p), n, p)
 y <- rnorm(n)
 tau <- 0.90
-m1 <- gper(y = y, x = x, tau = tau, eps = 1e-8) 
-            
+m1 <- gper(y = y, x = x, tau = tau, eps = 1e-8)
+
 }
 
 \keyword{models}

@@ -13,19 +13,18 @@ chosen for \code{lambda}.
 
 \arguments{
 	\item{object}{fitted \code{\link{cv.cogper}} object.}
-  
+
 	\item{s}{value(s) of the penalty parameter \code{lambda} at which predictions are required. Default is the value \code{s="lambda.1se"} stored on the CV \code{object}, it is the largest value of \code{lambda} such that error is within 1 standard error of the minimum. Alternatively \code{s="lambda.min"} can be used, it is the optimal value of \code{lambda} that gives minimum cross validation error \code{cvm}. If \code{s} is numeric, it is taken as the value(s) of \code{lambda} to be used.}
-  
-	\item{\dots}{not used. Other arguments to predict. } 
+
+	\item{\dots}{not used. Other arguments to predict. }
 }
 
 \details{This function makes it easier to use the results of
 cross-validation to get coefficients or make coefficient predictions.}
 \value{The object returned depends the \dots argument which is passed on to the \code{\link{predict}} method for \code{\link{cogper}} objects.}
 
-\author{ 
-Yuwen Gu and Hui Zou\cr
-Maintainer:  Yuwen Gu <guxxx192@umn.edu>
+\author{
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \examples{
@@ -42,10 +41,10 @@ w <- 2.0
 m2.cv <- cv.cogper(y = y, x = x, w = w, tau = tau, eps = 1e-8)
 
 #as.vector(coef(m2.cv, s = "lambda.min")$beta)
-#as.vector(coef(m2.cv, s = "lambda.min")$theta)
+#as.vector(coef(m2.cv, s = "lambda.min")$phi)
 }
 
-\seealso{\code{\link{cv.cogper}}, \code{\link{predict.cv.cogper}}} 
+\seealso{\code{\link{cv.cogper}}, \code{\link{predict.cv.cogper}}}
 
 \keyword{models}
 \keyword{regression}

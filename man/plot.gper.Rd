@@ -21,8 +21,7 @@ fitted gper object. This function is modified based on the \code{plot} method in
 A coefficient profile plot is produced.
 }
 \author{
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu  <guxxx192@umn.edu>
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \examples{

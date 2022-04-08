@@ -20,7 +20,7 @@ cv.cogper(x, y, w = 1.0, lambda = NULL, pred.loss = "loss",
 		\item{\dots}{other arguments that can be passed to cogper.}
 }
 
-\details{The function runs \code{\link{cogper}} \code{nfolds}+1 times. The first gets the \code{lambda} sequence, and the remainder fits the model with each of the folds removed. The average error and standard deviation over the folds are computed. 
+\details{The function runs \code{\link{cogper}} \code{nfolds}+1 times. The first gets the \code{lambda} sequence, and the remainder fits the model with each of the folds removed. The average error and standard deviation over the folds are computed.
 }
 
 \value{an object of class \code{\link{cv.cogper}} is returned, which is a list with the ingredients of the cross-validation fit.
@@ -37,8 +37,7 @@ cv.cogper(x, y, w = 1.0, lambda = NULL, pred.loss = "loss",
 }
 
 \author{
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu  <guxxx192@umn.edu>
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \seealso{\code{\link{cogper}}}

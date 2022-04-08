@@ -24,8 +24,7 @@ The call that produced the \code{\link{cogper}} object is printed, followed by a
 a three-column matrix, the first two columns are the number of nonzero mean and scale coefficients respectively and the third column is \code{Lambda}.}
 
 \author{
-Yuwen Gu and Hui Zou\cr
-Maintainer: Yuwen Gu <guxxx192@umn.edu>
+Maintainer: Mohamed Ouhourane <mohamed.ouhourane@gmail.com>
 }
 
 \examples{
