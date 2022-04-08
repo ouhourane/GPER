@@ -23,11 +23,36 @@ Like many other R packages, the simplest way to obtain GPER is to install it  fr
 ```{r setup}
 library(devtools)
 #devtools::install_github("https://github.com/ouhourane/GPER.git")
+```
+
+In this vignette, we demonstrate how to use the GSER() and cv.GSER() functions in the GPER
+package to fit the regularization path of parametric expectile regression with grouped penalties. 
+This includes group selection methods such as group Lasso, group Mcp, and group Scad. 
+The others function: predict(), coef(), cv.predict, cv.coef, ... are minor modifications or directly copied from the glmnet package.
+
+# Bardet dataset
+
+Gene expression data (20 genes for 120 samples) from the microarray experiments 
+of mammalian eye tissue samples of Scheetz et al. (2006).
+This data set contains 120 samples with 100 predictors 
+(expanded from 20 genes using 5 basis B-splines, as described in Yang, Y. and Zou, H. (2012)).
+
+```{r bardet}
 library(GPER)
+#load bardet dataset
+data(bardet)
+group <- rep(1:20,each=5)
+#run GPQR for group Lasso penaly, taux = 0.5 and  with the penalty group Lasso 
+#and the first pseudo-quantile approximation loss function 
+fit <- GPQR(x=bardet$x,y=bardet$y,group=group,method="GLasso",check="f1",taux=0.5)
+# To produce a coefficient profile plot of the coefficient paths for a fitted GPQR object.
+plot(fit)
 ```
 
 
-```{r Birthwt}
+# Birthwt data
+
+```{r Birthwt_GPER}
 library(grpreg)
 data(Birthwt)
 x <- Birthwt$X
@@ -46,6 +71,9 @@ par(mfrow = c(1, 3))
 tracer_GPER(0.2)
 tracer_GPER(0.5)
 tracer_GPER(0.8)
+```
+
+```{r Birthwt_COGPER}
 #######################
 tracer_COGPER<- function(taux){
   cv2 <- cv.cogper(x=x,y=y,group=group,pf.scale = bs,method="GLasso",tau=taux,w=0.3)
